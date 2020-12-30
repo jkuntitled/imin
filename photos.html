@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>I'm in</title>
+    <style>
+    body {
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+    body{
+      background-image: url('bg.gif');
+    }
+    select {
+      width: 100%;
+      min-width: 100px;
+      min-height: 50px;
+      padding: .5em .10em;
+      font-family: Times ;
+      font-size: 1.5vw ;
+      border: 2px solid black;
+      border-radius: 5px;
+    }
+      .grid {
+        display: grid;
+        grid-template-rows: 300px 1fr 1fr;
+        justify-items: center;
+      }
+      h1.title {
+        grid-row: 1;
+        font-size: 3vw ;
+        font-family: Times ;
+        align-self: flex-end;
+      }
+      .youtubeplaylist {
+        position: relative;
+        width: 100%;
+        height: 0 ;
+        padding-bottom: 56.25%;
+      }
+      .youtubeplaylist iframe {
+        position:absolute; width:100%; height:100%
+      }
+      .icon {
+        grid-row: 3;
+        width: 30px;
+        align-items: flex-start ;
+        padding-top: 20px ;
+      }
+      @media(max-width:1242px) {
+        select {
+          font-size: 16px;
+        }
+        body {
+          margin-left: 5%;
+          margin-right: 5%
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <h1 class="title">
+        <select onchange="location.href=this.value";>
+          <option value="playlist.html">Playlist</option>
+          <option value="diary/diary.php">Diary</option>
+          <option value="photos.html" selected="selected">Photos</option>
+        </select>
+      </h1>
+      <img src="47500027.jpg" alt="photo" width="100%">
+      <img src="000017.jpg" alt="photo" width="100%">
+        <a href="https://www.instagram.com/jin.mov"><img src="insta.png" alt="instagram" class=icon></a>
+    </div>
+  </body>
+</html>
